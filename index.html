@@ -16,12 +16,12 @@
     <div class="container">
         <div class="row">
             <div class="card col-6 mt-4 p-4 mx-auto" id="question">
-                <h1 class="mx-auto">Fråga 1</h1>
-                <h2 class="mt-4">Hur många bultar finns det i Ölandsbron?</h2>
-                    <button type="button" id="knapp" class="btn btn-primary mt-4">356434</button>
-                    <button type="button" class="btn btn-alert mt-2">223525</button>
-                    <button type="button" class="btn btn-success mt-2">2432</button>
-                    <button type="button" class="btn btn-warning mt-2">24522</button>
+                <h1 class="mx-auto" id="fragaNumber">Fråga 1</h1>
+                <h2 class="mt-4" id="fraga">Nisse</h2>
+                    <button type="button" id="alt1" class="btn btn-primary mt-4"></button>
+                    <button type="button" id="alt2" class="btn btn-alert mt-2"></button>
+                    <button type="button" id="alt3" class="btn btn-success mt-2"></button>
+                    <button type="button" id="alt4" class="btn btn-warning mt-2"></button>
             
             </div>
 
@@ -38,20 +38,31 @@
         var fel = document.getElementById("fel");
         var quest = document.getElementById("question");
         var ok = document.getElementById("ok");
-
-        btn.addEventListener("click", function() {
-            var svar = btn.innerText;
-            if(svar=="356434") {
-
-                fel.style.display = "block";
-                question.style.display = "none";
+        var fragetext = document.getElementById("fraga");
+        var alt1 = document.getElementById("alt1");
+        var alt2 = document.getElementById("alt2");
+        var alt3 = document.getElementById("alt3");
+        var alt4 = document.getElementById("alt4");
+        var fragor = [
+            {
+                fraga: "Hur många hoppjerkor finns det?",
+                rattSvar: "345123",
+                alternativ: ["12312323","1431","0123823"]
+            },
+            {
+                fraga: "Var bor tomten?",
+                rattSvar: "Nordpolen",
+                alternativ: ["Sydkorea","Tchad","Mali"]
             }
-        });
+        ];
+    
+        fragetext.innerText = fragor[0].fraga;
+        alt1.innerHTML = fragor[0].rattSvar;
+        alt2.innerHTML = fragor[0].alternativ[0];
+        alt3.innerHTML = fragor[0].alternativ[1];
+        alt4.innerHTML = fragor[0].alternativ[2];
 
-        ok.addEventListener("click",function() {
-            fel.style.display = "none";
-            question.style.display = "inline-block";
-        })
+       console.log(fragor[0].alternativ[2])
     </script>
 </body>
 </html>

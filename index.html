@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quizapp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style>
+        #fel {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="card col-6 mt-4 p-4 mx-auto" id="question">
+                <h1 class="mx-auto">Fråga 1</h1>
+                <h2 class="mt-4">Hur många bultar finns det i Ölandsbron?</h2>
+                    <button type="button" id="knapp" class="btn btn-primary mt-4">356434</button>
+                    <button type="button" class="btn btn-alert mt-2">223525</button>
+                    <button type="button" class="btn btn-success mt-2">2432</button>
+                    <button type="button" class="btn btn-warning mt-2">24522</button>
+            
+            </div>
+
+            <div id="fel" class="card col-6 mt-4 p-4 mx-auto bg-danger text-white">
+                <h1>DU SVARADE FEL!</h1>
+                <button type="button" class="btn btn-alert" id="ok">Ok</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var btn = document.getElementById("knapp");
+        var fel = document.getElementById("fel");
+        var quest = document.getElementById("question");
+        var ok = document.getElementById("ok");
+
+        btn.addEventListener("click", function() {
+            var svar = btn.innerText;
+            if(svar=="356434") {
+
+                fel.style.display = "block";
+                question.style.display = "none";
+            }
+        });
+
+        ok.addEventListener("click",function() {
+            fel.style.display = "none";
+            question.style.display = "inline-block";
+        })
+    </script>
+</body>
+</html>

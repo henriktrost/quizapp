@@ -6,27 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quizapp</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <style>
-        #fel {
-            display: none;
-        }
-    </style>
+
 </head>
 <body class="bg-dark">
     <div class="container">
         <div class="row">
             <div class="card col-6 mt-4 p-4 mx-auto" id="question">
-                <h1 class="mx-auto" id="fragaNumber">Fråga 1</h1>
+                <h1 class="mx-auto" id="fragaNumber"></h1>
                 <h2 class="mt-4" id="fraga">Nisse</h2>
-                    <button type="button" id="alt1" class="btn btn-primary mt-4"></button>
-                    <button type="button" id="alt2" class="btn btn-alert mt-2"></button>
-                    <button type="button" id="alt3" class="btn btn-success mt-2"></button>
-                    <button type="button" id="alt4" class="btn btn-warning mt-2"></button>
-            
-            </div>
+                    <button type="button" id="alt1" class="alter btn btn-primary mt-4"></button>
+                    <button type="button" id="alt2" class="alter btn btn-alert mt-2"></button>
+                    <button type="button" id="alt3" class="alter btn btn-success mt-2"></button>
+                    <button type="button" id="alt4" class="alter btn btn-warning mt-2"></button>
+        </div>
+        </div>
+        <div class="row">    
+
 
             <div id="fel" class="card col-6 mt-4 p-4 mx-auto bg-danger text-white">
-                <h1>DU SVARADE FEL!</h1>
+                <h1>Antal rätt</h1>
                 <button type="button" class="btn btn-alert" id="ok">Ok</button>
             </div>
         </div>
